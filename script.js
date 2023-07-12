@@ -14,7 +14,7 @@ function createUser(name, email) {
 // Function to display users in the table
 function renderUsers() {
     // Clear the existing table rows
-    //tableBody.innerHTML = "";
+    tableBody.innerHTML = "";
 
     // Iterate through users and create table rows
     users.forEach((user, index) => {
