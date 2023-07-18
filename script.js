@@ -48,7 +48,7 @@ function handleSubmit(event) {
     const email = document.getElementById("email").value;
     // Empty Field Check
     if(name.length == 0 || email.length == 0){
-        alert("NAME or EMAIL field is empty");
+        alert("Enter Data in Both Fields");
     } else {
         // Create a new user
          createUser(name, email);
