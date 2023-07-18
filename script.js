@@ -28,12 +28,12 @@ function renderUsers() {
 
         const actionCell = row.insertCell();
         const editButton = document.createElement("button");
-        editButton.textContent = "Update";
+        editButton.textContent = "Edit";
         editButton.addEventListener("click", () => editUser(index));
         actionCell.appendChild(editButton);
 
         const deleteButton = document.createElement("button");
-        deleteButton.textContent = "Remove";
+        deleteButton.textContent = "Delete";
         deleteButton.addEventListener("click", () => deleteUser(index));
         actionCell.appendChild(deleteButton);
     });
@@ -54,7 +54,7 @@ function handleSubmit(event) {
          createUser(name, email);
     }
 
-
+    createBtn.innerText='Create';
     // Render users in the table
     renderUsers();
 
@@ -73,7 +73,7 @@ function editUser(index) {
 
     // Remove the user from the array
     users.splice(index, 1);
-
+    createBtn.innerText='Update';
     // Render users in the table
     renderUsers();
 }
