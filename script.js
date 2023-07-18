@@ -28,12 +28,12 @@ function renderUsers() {
 
         const actionCell = row.insertCell();
         const editButton = document.createElement("button");
-        editButton.textContent = "Edit";
+        editButton.textContent = "Update";
         editButton.addEventListener("click", () => editUser(index));
         actionCell.appendChild(editButton);
 
         const deleteButton = document.createElement("button");
-        deleteButton.textContent = "Delete";
+        deleteButton.textContent = "Remove";
         deleteButton.addEventListener("click", () => deleteUser(index));
         actionCell.appendChild(deleteButton);
     });
