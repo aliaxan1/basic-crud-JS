@@ -33,7 +33,7 @@ function renderUsers() {
         actionCell.appendChild(editButton);
 
         const deleteButton = document.createElement("button");
-        deleteButton.textContent = "Delete";
+        deleteButton.textContent = "Remove";
         deleteButton.addEventListener("click", () => deleteUser(index));
         actionCell.appendChild(deleteButton);
     });
