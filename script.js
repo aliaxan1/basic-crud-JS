@@ -1,6 +1,6 @@
 
 let users = [];
-
+let update = false;
 
 const form = document.getElementById("myForm");
 const createBtn =document.getElementById("create-btn");
@@ -53,8 +53,11 @@ function handleSubmit(event) {
         // Create a new user
          createUser(name, email);
     }
+    if (update == true) {
+        createBtn.innerText='Create';
+        update = false;
+    }
 
-    createBtn.innerText='Create';
     // Render users in the table
     renderUsers();
 
@@ -73,7 +76,12 @@ function editUser(index) {
 
     // Remove the user from the array
     users.splice(index, 1);
+
+    //for changing of update button
     createBtn.innerText='Update';
+    update = true;
+
+
     // Render users in the table
     renderUsers();
 }
